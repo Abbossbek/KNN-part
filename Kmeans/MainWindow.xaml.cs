@@ -104,7 +104,6 @@ namespace Kmeans
                     endRange += rangeForThread;
                 }
 
-                //Aspetta che i thread finiscano
                 for (int index = 0; index < ts.Length; index++)
                     ts[index].Join();
 
@@ -112,7 +111,7 @@ namespace Kmeans
             for (int index = 0; index < _clusterUI.Count; index++)
             {
                 _clusterUI[index].UpdatePosition();
-                //if(_clusterUI[index].) Aggiunge il father se non ce l'ha DA FARE
+                //if(_clusterUI[index].) 
                 if (_clusterUI[index].Element.Changing)
                 {
                     changed = true;
